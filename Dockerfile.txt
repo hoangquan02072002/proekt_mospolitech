@@ -1,0 +1,18 @@
+FROM ubuntu:18.04
+
+LABEL maintainer="NGUYENLEHOANGQUAN"
+
+COPY Quan /Quan
+
+WORKDIR /Hoang
+RUN apt-get update
+RUN apt-get install qt5-default -y
+RUN apt-get install qtbase5-dev -y
+RUN apt-get install qt5-qmake
+RUN apt-get install build-essential -y
+
+RUN qmake echoServer.pro
+RUN make
+
+ENTRYPOINT ["./echoServer"]
+CMD [""]
