@@ -1,6 +1,0 @@
-#!/bin/sh
-# Enter QT login and password
-export QT_CI_LOGIN=""
-export QT_CI_PASSWORD=""
-
-bash qt-install
